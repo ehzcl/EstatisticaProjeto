@@ -11,12 +11,12 @@ ELENCO = (planilha$Personagens)
 AUDIENCIA = (planilha$Audiencia.Em.milhoes.)
 
 # ------------------ questao 2 ------------------ #
-# Nesta questao utilizamos um laço para percorrer a coluna das notas, somando-as 
+# Nesta questao utilizamos um laÃ§o para percorrer a coluna das notas, somando-as 
 # em um acumulador para calculo da media, uso do acumulador (zerado) para calculo
 # do desvio padrao
 
 # inicio do calculo da media
-
+nota = NOTA
 ACUMULADOR = 0
 for(i in 1:length(NOTA)) {
   ACUMULADOR = ACUMULADOR + NOTA[i]
@@ -47,27 +47,27 @@ MODA = 0
 APARICOESMODA = 0
 # quantidade de vezes que a moda apareceu
 
-sort(NOTA)
+sort(nota)
 # ordena o vetor de notas
 
-for (i in 1:length(NOTA)) {
+for (i in 1:length(nota)) {
   APARICOES = 0
   # quantidade de vezes que um candidato a moda apareceu
   
-  for(j in 1:length(NOTA)) {
-    if(NOTA[i] == NOTA[j]) {
+  for(j in 1:length(nota)) {
+    if(nota[i] == nota[j]) {
       APARICOES = APARICOES + 1
       # se a nota se repete incrementa-se o numero de aparicoes
     }
   }
   if(APARICOES > APARICOESMODA) {
     APARICOESMODA = APARICOES
-    MODA = NOTA[i]
+    MODA = nota[i]
     # se o numero de aparicoes de um candidato a moda e maior que a quantidade
     # de vezes que a moda atual se repete, ele torna-se a nova moda e com isso
     # a quantidade de vezes que a moda repete-se torna-se a quantidade de vezes
     # que o candidato se repetiu.
-
+    
   }
 }
 print("Moda")
